@@ -11,11 +11,21 @@ import {InputTextModule} from 'primeng/inputtext';
 import {PasswordModule} from 'primeng/password';
 import {ButtonModule} from 'primeng/button';
 import {PanelModule} from 'primeng/panel';
+import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'createNewAccount', component: CreateNewAccountComponent },
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CreateNewAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +34,11 @@ import {PanelModule} from 'primeng/panel';
     InputTextModule,
     PasswordModule,
     ButtonModule,
-    PanelModule
+    PanelModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
