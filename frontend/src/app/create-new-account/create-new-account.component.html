@@ -1,1 +1,121 @@
-<p>create-new-account works!</p>
+<div style="margin-top: 2%; margin-left: 35%; display: flex">
+  <p-card
+    [style]="{ width: '25rem', 'text-align': 'center' }"
+    class="p-col-4"
+    header="Create New Account"
+  >
+    <form [formGroup]="createNewAccountForm" (click)="createAccount()">
+      <!-- firstName -->
+      <div>
+        <span class="p-float-label p-mb-4 p-mt-4">
+          <input
+            id="float-input-firstname"
+            class="p-col-12"
+            type="text"
+            pInputText
+            formControlName="firstName"
+          />
+          <label for="float-input">First name</label>
+        </span>
+      </div>
+
+      <!-- lastName -->
+      <div>
+        <span class="p-float-label p-mb-4 p-mt-4">
+          <input
+            id="float-input-lastname"
+            class="p-col-12"
+            type="text"
+            pInputText
+            formControlName="lastName"
+          />
+          <label for="float-input">Last name</label>
+        </span>
+      </div>
+
+      <!-- username -->
+      <div>
+        <span class="p-float-label p-mb-4 p-mt-4">
+          <input
+            id="float-input-username"
+            class="p-col-12"
+            type="text"
+            pInputText
+            formControlName="username"
+          />
+          <label for="float-input">Username</label>
+        </span>
+      </div>
+
+      <!-- email -->
+      <div>
+        <span class="p-float-label p-mb-4 p-mt-4">
+          <input
+            id="float-input-email"
+            class="p-col-12"
+            type="password"
+            pInputText
+            formControlName="email"
+          />
+          <label for="float-input">Email</label>
+        </span>
+      </div>
+
+      <!-- mobileno -->
+      <div>
+        <span class="p-float-label p-mb-4 p-mt-4">
+          <input
+            id="float-input-mobileno"
+            class="p-col-12"
+            type="password"
+            pInputText
+            formControlName="mobileNo"
+          />
+          <label for="float-input">Mobile Number</label>
+        </span>
+      </div>
+
+      <!-- password -->
+      <div>
+        <div class="p-inputgroup p-mb-4 p-mt-4">
+          <input
+            class="p-col-12"
+            type="text"
+            pInputText
+            placeholder="Password"
+            formControlName="password"
+          />
+          <button
+            type="button"
+            pButton
+            pRipple
+            icon="pi pi-eye"
+            styleClass="p-button-warn"
+          ></button>
+        </div>
+      </div>
+      <div>
+        <!-- back button -->
+        <span>
+          <button
+            pButton
+            type="button"
+            class="p-mb-2 p-mt-2"
+            label="Back"
+            [routerLink]="['/login']"
+          ></button>
+        </span>
+
+        <!-- create account button -->
+        <span class="p-col-12">
+          <button
+            pButton
+            type="button"
+            class="success p-mb-2 p-mt-2"
+            label="Create Account"
+          ></button>
+        </span>
+      </div>
+    </form>
+  </p-card>
+</div>
