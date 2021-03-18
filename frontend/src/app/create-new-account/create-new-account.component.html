@@ -4,7 +4,7 @@
     class="p-col-4"
     header="Create New Account"
   >
-    <form [formGroup]="createNewAccountForm" (click)="createAccount()">
+    <form [formGroup]="createNewAccountForm">
       <!-- firstName -->
       <div>
         <span class="p-float-label p-mb-4 p-mt-4">
@@ -53,7 +53,7 @@
           <input
             id="float-input-email"
             class="p-col-12"
-            type="password"
+            type="email"
             pInputText
             formControlName="email"
           />
@@ -67,7 +67,7 @@
           <input
             id="float-input-mobileno"
             class="p-col-12"
-            type="password"
+            type="number"
             pInputText
             formControlName="mobileNo"
           />
@@ -80,7 +80,7 @@
         <div class="p-inputgroup p-mb-4 p-mt-4">
           <input
             class="p-col-12"
-            type="text"
+            type="password"
             pInputText
             placeholder="Password"
             formControlName="password"
@@ -113,6 +113,7 @@
             type="button"
             class="success p-mb-2 p-mt-2"
             label="Create Account"
+            (click)="createAccount()"
           ></button>
         </span>
       </div>

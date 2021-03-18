@@ -10,10 +10,10 @@ const usersSchema = Schema({
     username: { type: String, required: [true, 'username is required'] },
     password: { type: String, required: [true, 'password is required'] },
     Profile: {
-        firstName: { type: String, required: [true, 'firstname is required'] },
+        firstName: { type: String },
         lastName: { type: String },
-        email: { type: String, required: [true, 'email is required'] },
-        mobileNo: { type: Number, required: [true, 'mobile number is required'] },
+        email: { type: String },
+        mobileNo: { type: Number },
         lastLogin: { type: Date, default: new Date().toISOString() }
     }
 

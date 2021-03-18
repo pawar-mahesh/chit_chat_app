@@ -1,6 +1,6 @@
 <div style="margin-top: 7%; margin-left: 35%; display: flex;">
   <p-card [style]="{'width': '25rem', 'text-align':'center'}" class="p-col-4" header="Login">
-    <form [formGroup]='loginForm' (click)='login()' style=" border-bottom: 1px solid rgb(221, 221, 221)">
+    <form [formGroup]='loginForm' style=" border-bottom: 1px solid rgb(221, 221, 221)">
 
       <!-- username -->
       <div>
@@ -20,7 +20,7 @@
 
       <!-- login button -->
       <div>
-        <button pButton type="button" class="p-mb-4 p-mt-2" label="Login"></button>
+        <button pButton type="button" class="p-mb-4 p-mt-2" label="Login" (click)='login()'></button>
       </div>
 
     </form>

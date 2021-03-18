@@ -6,7 +6,7 @@ const service = require('../service/user');
 route.post('/login', (req, res, next) => {
     let username = req.body.username;
     let password = req.body.password;
-    console.log(req.body)
+    // console.log(req.body)
     return service.loginUser(username, password).then(item => {
         res.json({ data: item });
     }).catch(err => {
