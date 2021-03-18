@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'createNewAccount', component: CreateNewAccountComponent },
   { path: 'home', component: HomePageComponent },
+  { path: '**', redirectTo:'home', pathMatch: 'full' },
 ]
 
 @NgModule({
